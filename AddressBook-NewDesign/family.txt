@@ -1,0 +1,8 @@
+Bob Johnson,7994953508,gou@gmail.com
+John Deo,9899099890,john@gmail.com
+Lionel Messi,1112223333,bob@company.com
+Ravi Ullas,4445556666,carol@company.com
+Reji,9877898765,riche@gmi.com
+Richard,9999998987,richie@gm.com
+Richii,9878987675,riche@gmai.com
+Sreeraj K C,0987654321,alice@example.com

@@ -1,0 +1,62 @@
+Project Name : Address Book
+Name : Gourav K
+Date : 02/08/25
+
+Address Book
+The Address Book project is a simple command-line application written in C that allows a user to
+create, search, edit, delete, and list contact details. Each contact holds a name, phone number,
+and email address. The project is a demonstration of file handling, structure usage, validation,
+and menu-driven interfaces in C.
+Contacts are stored in separate files:
+- family.txt — Family group contacts
+- friend.txt — Friends group contacts
+- office.txt — Office group contacts
+Software requirement is GCC C compiler.
+Dependencies are Standard C libraries (stdio.h, stdlib.h, ctype.h, string.h)
+
+Code Organization
+
+main.c --> Handles the menu and program flow
+contact.c --> Implements core contact management features
+file.c --> Implements data validation and display functions
+
+Function Documentation
+
+contact.c:
+	- initialize(AddressBook *): Initializes the address book.
+	- createContact(AddressBook *): User inputs for name, phone, email. Validates and adds a
+	contact.
+	- listContacts(AddressBook *, int): Displays all contacts, sorted by criteria (name, phone,
+	email).
+	- searchContact(AddressBook *, int): Search contacts by name/phone/email by partial match.
+	- editContact(AddressBook *, int): Edit a contactʼs data based on search.
+	- deleteContact(AddressBook *, int): Delete a contact found via search.
+file.c:
+	- isalphabet(char *): Validates if the name contains only alphabets, space, or dot.
+	- isneu(char*): Validates phone number format (all digits, starts with 6).
+	- mail(char*, int): Validates basic email format.
+	- idcheck(char*): Further checks for valid email addresses.
+	- check(char *, char *, int): Checks if b is a substring (used for comparison).
+	- disp(): Prints contact list headers.
+	- error()/sucess() : Feedback messages
+
+Sample input/output
+
+Creating a Contact:
+
+	Enter name : Gourav K
+	Enter PH no. : 9876543210
+	Enter gmail : gouravk@gmail.com
+
+Listing Contacts:
+
+	SN Name 	Phone no. 	  Address
+	----------------------------------------------------
+	1. Gourav K 	9876543210 	gouravk@gmail.com
+	----------------------------------------------------
+
+Editing a Contact:
+	- Prompted which field to edit (name, phone, mail), with required validations.
+
+Deleting a Contact:
+	- Presents matching contacts to choose from before deletion.
